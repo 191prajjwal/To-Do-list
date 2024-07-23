@@ -29,8 +29,15 @@ function addItem()
 
 ulist.addEventListener("click",(e)=>{
     if(e.target.tagName==="LI"){
+
         e.target.classList.toggle("checked")
         saveLocally()
+
+        if(e.target.tagName==="LI" && e.target.classList =="checked")
+        {
+            setTimeout(()=>{alert(" Hurray!! This task is completed")},200)
+        }
+        
     }
     else if(e.target.tagName==="SPAN")
     {
